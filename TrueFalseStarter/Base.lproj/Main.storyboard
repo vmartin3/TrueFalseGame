@@ -19,108 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-MS-ECi">
-                                <rect key="frame" x="150" y="147" width="300" height="50"/>
-                                <color key="backgroundColor" red="0.047058823529411764" green="0.47450980392156861" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="6Ha-4G-ncF"/>
-                                    <constraint firstAttribute="width" constant="300" id="C4N-qr-PkR"/>
-                                    <constraint firstAttribute="width" secondItem="J1V-MS-ECi" secondAttribute="height" multiplier="6:1" id="sVW-cc-ygC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Choice 1"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="sVW-cc-ygC"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qpa-j6-p0X"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AS4-HX-g9f">
-                                <rect key="frame" x="150" y="205" width="300" height="50"/>
-                                <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="HzD-EE-lIo"/>
-                                    <constraint firstAttribute="height" constant="50" id="X1s-RX-uh8"/>
-                                    <constraint firstAttribute="width" secondItem="AS4-HX-g9f" secondAttribute="height" multiplier="6:1" id="tpf-RZ-g9S"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Choice 2"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="tpf-RZ-g9S"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfk-Z2-crr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIM-MO-3gi">
-                                <rect key="frame" x="150" y="263" width="300" height="50"/>
-                                <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="YTj-g0-tR0"/>
-                                    <constraint firstAttribute="height" constant="50" id="a1d-Lu-mqr"/>
-                                    <constraint firstAttribute="width" secondItem="AIM-MO-3gi" secondAttribute="height" multiplier="6:1" id="gC5-q9-lw0"/>
-                                    <constraint firstAttribute="width" constant="300" id="l0C-dR-zjK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Choice 3"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="YTj-g0-tR0"/>
-                                        <exclude reference="gC5-q9-lw0"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fMG-sl-BD5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29d-rf-Cqs">
-                                <rect key="frame" x="150" y="321" width="300" height="50"/>
-                                <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="29d-rf-Cqs" secondAttribute="height" multiplier="6:1" id="5vW-SF-7fN"/>
-                                    <constraint firstAttribute="width" constant="300" id="RYY-wv-mqV"/>
-                                    <constraint firstAttribute="height" constant="50" id="loF-OL-z1T"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Choice 4"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="5vW-SF-7fN"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nW9-57-Bsj"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K17-uy-MvB">
                                 <rect key="frame" x="150" y="495" width="300" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.57647058823529407" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
@@ -151,7 +49,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Answer" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQb-L3-3mY">
-                                <rect key="frame" x="168" y="74" width="265" height="71"/>
+                                <rect key="frame" x="168" y="123" width="265" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="71" id="fZq-YZ-aOv"/>
                                     <constraint firstAttribute="width" constant="265" id="tCs-ta-bC5"/>
@@ -160,23 +58,125 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer: 00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0J-0m-Qpj">
-                                <rect key="frame" x="150" y="412" width="300" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-MS-ECi">
+                                <rect key="frame" x="150" y="196" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.047058823529411764" green="0.47450980392156861" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="8Nf-bD-BbZ"/>
-                                    <constraint firstAttribute="height" constant="21" id="MkV-qW-zhs"/>
+                                    <constraint firstAttribute="height" constant="50" id="6Ha-4G-ncF"/>
+                                    <constraint firstAttribute="width" constant="300" id="C4N-qr-PkR"/>
+                                    <constraint firstAttribute="width" secondItem="J1V-MS-ECi" secondAttribute="height" multiplier="6:1" id="sVW-cc-ygC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Choice 1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sVW-cc-ygC"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qpa-j6-p0X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AS4-HX-g9f">
+                                <rect key="frame" x="150" y="254" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="HzD-EE-lIo"/>
+                                    <constraint firstAttribute="height" constant="50" id="X1s-RX-uh8"/>
+                                    <constraint firstAttribute="width" secondItem="AS4-HX-g9f" secondAttribute="height" multiplier="6:1" id="tpf-RZ-g9S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Choice 2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tpf-RZ-g9S"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfk-Z2-crr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIM-MO-3gi">
+                                <rect key="frame" x="150" y="312" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="YTj-g0-tR0"/>
+                                    <constraint firstAttribute="height" constant="50" id="a1d-Lu-mqr"/>
+                                    <constraint firstAttribute="width" secondItem="AIM-MO-3gi" secondAttribute="height" multiplier="6:1" id="gC5-q9-lw0"/>
+                                    <constraint firstAttribute="width" constant="300" id="l0C-dR-zjK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Choice 3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YTj-g0-tR0"/>
+                                        <exclude reference="gC5-q9-lw0"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fMG-sl-BD5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29d-rf-Cqs">
+                                <rect key="frame" x="150" y="370" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="29d-rf-Cqs" secondAttribute="height" multiplier="6:1" id="5vW-SF-7fN"/>
+                                    <constraint firstAttribute="width" constant="300" id="RYY-wv-mqV"/>
+                                    <constraint firstAttribute="height" constant="50" id="loF-OL-z1T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Choice 4"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5vW-SF-7fN"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nW9-57-Bsj"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-ih-1Ky">
-                                <rect key="frame" x="47" y="28" width="495" height="117"/>
+                                <rect key="frame" x="47" y="77" width="495" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="495" id="hxZ-13-XKC"/>
                                     <constraint firstAttribute="height" constant="117" id="wBZ-KO-iYu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer: 00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0J-0m-Qpj">
+                                <rect key="frame" x="150" y="461" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8Nf-bD-BbZ"/>
+                                    <constraint firstAttribute="height" constant="21" id="MkV-qW-zhs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -187,7 +187,7 @@
                             <constraint firstItem="AS4-HX-g9f" firstAttribute="trailing" secondItem="J1V-MS-ECi" secondAttribute="trailing" id="8Kz-Vk-oxd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="I3V-ih-1Ky" secondAttribute="trailing" constant="18" id="AEb-r7-7vy"/>
                             <constraint firstItem="k0J-0m-Qpj" firstAttribute="top" secondItem="29d-rf-Cqs" secondAttribute="bottom" constant="41" id="Aol-IH-dSz"/>
-                            <constraint firstItem="K17-uy-MvB" firstAttribute="top" secondItem="29d-rf-Cqs" secondAttribute="bottom" constant="124" id="BH5-4B-bV0"/>
+                            <constraint firstItem="K17-uy-MvB" firstAttribute="top" secondItem="29d-rf-Cqs" secondAttribute="bottom" constant="75" id="BH5-4B-bV0"/>
                             <constraint firstItem="I3V-ih-1Ky" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-5.5" id="Bkv-Xt-iOT"/>
                             <constraint firstItem="29d-rf-Cqs" firstAttribute="leading" secondItem="J1V-MS-ECi" secondAttribute="leading" id="Dso-iX-oOh"/>
                             <constraint firstItem="29d-rf-Cqs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FSk-AA-Avw"/>
@@ -200,7 +200,7 @@
                             <constraint firstItem="AS4-HX-g9f" firstAttribute="height" secondItem="J1V-MS-ECi" secondAttribute="height" id="Lvo-Gg-0cG"/>
                             <constraint firstItem="K17-uy-MvB" firstAttribute="width" secondItem="J1V-MS-ECi" secondAttribute="width" id="OOC-r6-NRm"/>
                             <constraint firstItem="AS4-HX-g9f" firstAttribute="trailing" secondItem="J1V-MS-ECi" secondAttribute="trailing" id="OvF-eI-3ZC"/>
-                            <constraint firstItem="I3V-ih-1Ky" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="PcQ-ig-yJi"/>
+                            <constraint firstItem="I3V-ih-1Ky" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="57" id="PcQ-ig-yJi"/>
                             <constraint firstItem="J1V-MS-ECi" firstAttribute="top" secondItem="JQb-L3-3mY" secondAttribute="bottom" constant="2" id="QPh-xm-2y3"/>
                             <constraint firstItem="AS4-HX-g9f" firstAttribute="top" secondItem="J1V-MS-ECi" secondAttribute="bottom" constant="8" id="Qgg-W4-gm4"/>
                             <constraint firstItem="I3V-ih-1Ky" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="SDY-5y-7b5"/>
@@ -223,7 +223,7 @@
                             <constraint firstItem="AS4-HX-g9f" firstAttribute="width" secondItem="J1V-MS-ECi" secondAttribute="width" id="qPj-C7-CdG"/>
                             <constraint firstItem="AS4-HX-g9f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r9J-dB-zat"/>
                             <constraint firstItem="29d-rf-Cqs" firstAttribute="top" secondItem="AIM-MO-3gi" secondAttribute="bottom" constant="8" id="uHI-gi-eYy"/>
-                            <constraint firstItem="K17-uy-MvB" firstAttribute="top" secondItem="k0J-0m-Qpj" secondAttribute="bottom" constant="62" id="ulM-9S-xtl"/>
+                            <constraint firstItem="K17-uy-MvB" firstAttribute="top" secondItem="k0J-0m-Qpj" secondAttribute="bottom" constant="13" id="ulM-9S-xtl"/>
                             <constraint firstItem="AS4-HX-g9f" firstAttribute="centerY" secondItem="J1V-MS-ECi" secondAttribute="centerY" id="uol-fa-PM3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K17-uy-MvB" secondAttribute="bottom" constant="55" id="vpp-Tn-yRD"/>
                         </constraints>
