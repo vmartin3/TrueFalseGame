@@ -58,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				97093D3F1C913506001275BC /* Main.storyboard */,
+				97093D441C913506001275BC /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -104,7 +105,6 @@
 				7699196B1D1088AD00EC7D18 /* Controller */,
 				769919701D10EFE000EC7D18 /* Sounds */,
 				97093D421C913506001275BC /* Assets.xcassets */,
-				97093D441C913506001275BC /* LaunchScreen.storyboard */,
 				97093D471C913506001275BC /* Info.plist */,
 				97093D521C932116001275BC /* GameSound.wav */,
 			);
