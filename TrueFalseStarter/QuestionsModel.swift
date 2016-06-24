@@ -9,25 +9,31 @@
 import Foundation
 import GameKit
 
+var usedQuestions: [Int] = []
+
 struct QuestionsModel {
-    let triviaQuestions: [[String : String]] = [
-        ["Question": "This was the only US President to serve more than two consecutive terms.", "Answer": "Franklin D. Roosevelt", "Option2":"George Washington","Option3":"Woodrow Wilsdon","Option4":"Andrew Jack"],
-        ["Question": "Which of the following countries has the most residents?", "Answer": "Nigeria", "Option2":"Russia","Option3":"Iran","Option4":"Vietnam"],
-        ["Question": "In what year was the United Nations founded?", "Answer": "1945","Option2":"1918","Option3":"1919","Option4":"1954"],
-        ["Question": "The Titanic departed from the United Kingdom, where was it supposed to arrive?", "Answer": "New York City","Option2":"Paris","Option3":"Washington D.C.","Option4":"Boston"],
-        ["Question": "Which nation produces the most oil?", "Answer": "Canada","Option2":"Iran","Option3":"Iraq","Option4":"Brazil"],
-        ["Question": "Which country has most recently won consecutive World Cups in Soccer?", "Answer": "Brazil","Option2":"Italy","Option3":"Argetina","Option4":"Spain"],
-        ["Question": "Which of the following rivers is longest?", "Answer": "Mississippi","Option2":"Yangtze","Option3":"Congo","Option4":"Mekong"],
-        ["Question": "Which city is the oldest?", "Answer": "Mexico City","Option2":"Cape Town","Option3":"San Juan","Option4":"Sydney"],
-        ["Question": "Which country was the first to allow women to vote in national elections?", "Answer": "Poland","Option2":"United States","Option3":"Sweden","Option4":"Senegal"],
-        ["Question": "Which of these countries won the most medals in the 2012 Summer Games?", "Answer": "Great Britian","Option2":"France","Option3":"Germany","Option4":"Japan"]
-    ]
+    let question: String
+    let answer: String
+    let choice2: String
+    let choice3: String
+    let choice4: String
     
-    func getRandomQuestion() -> Dictionary<String,String>{
-        let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(triviaQuestions.count)
-        return triviaQuestions[randomNumber]
+    func getRandomQuestion(randomNumber: Int) -> String {
+        let options = [self.answer,self.choice2,self.choice3,self.choice4]
+        return (options[randomNumber])
     }
-
-
 }
+
+let question1 = QuestionsModel(question: "This was the only US President to serve more than two consecutive terms.", answer: "Franklin D. Roosevelt", choice2: "George Washington", choice3: "Woodrow Wilsdon", choice4: "Andrew Jack")
+let question2 = QuestionsModel(question: "Which of the following countries has the most residents?", answer: "Nigeria", choice2: "Russia", choice3: "Iran", choice4: "Vietnam")
+let question3 = QuestionsModel(question: "In what year was the United Nations founded?", answer: "1945", choice2: "1918", choice3: "1919", choice4: "1954")
+let question4 = QuestionsModel(question: "The Titanic departed from the United Kingdom, where was it supposed to arrive?", answer: "New York City", choice2: "Paris", choice3: "Washington D.C.", choice4: "Boston")
+let question5 = QuestionsModel(question: "Which nation produces the most oil?", answer: "Canada", choice2: "Iran", choice3: "Iraq", choice4: "Brazil")
+let question6 = QuestionsModel(question: "Which country has most recently won consecutive World Cups in Soccer?", answer: "Brazil", choice2: "Italy", choice3: "Argetina", choice4: "Spain")
+let question7 = QuestionsModel(question: "Which of the following rivers is longest?", answer: "Mississippi", choice2: "Yangtze", choice3: "Congo", choice4: "Mekong")
+let question8 = QuestionsModel(question: "Which city is the oldest?", answer: "Mexico City", choice2: "Cape Town", choice3: "San Juan", choice4: "Sydney")
+let question9 = QuestionsModel(question: "Which country was the first to allow women to vote in national elections?", answer: "Poland", choice2: "United States", choice3: "Sweden", choice4: "Senegal")
+let question10 = QuestionsModel(question: "Which of these countries won the most medals in the 2012 Summer Games?", answer: "Great Britian", choice2: "France", choice3: "Germany", choice4: "Japan")
+
+let triviaQuestions: [QuestionsModel] = [question1,question2,question3,question4,question5,question6,question7,question8,question9,question10]
 

@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var choice2: UIButton!
     @IBOutlet weak var choice3: UIButton!
     @IBOutlet weak var choice4: UIButton!
-    @IBOutlet weak var displayCorrectAnswerField: UILabel!
     
     @IBOutlet weak var timer: UILabel!
     let correctSoundURL =  NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("correct", ofType: "wav")!)
@@ -31,7 +30,7 @@ class ViewController: UIViewController {
     var usedQuestions: [Int] = []
     var usedOptions: [Int] = []
     var settings = GameSettingsModel()
-    let questionSet = QuestionsModel()
+    let questionSet = triviaQuestions
     var gameTimer = NSTimer()
     var timerCounter = 15
     
@@ -67,7 +66,7 @@ class ViewController: UIViewController {
         //If timer runs out stop the timer and display the right answer
         if timerCounter == 0{
             stopTimer()
-            setGameScreen(sound: audioPlayer2, hideCorrectAnswerField: false, setCorrectAnswerText: "Sorry! You ran out of time the correct answer was ", setQuetionFieldText: " ", setDelayTime: 3)
+            setGameScreen(sound: audioPlayer2, setQuetionFieldText: "Sorry! You ran out of time the correct answer was ", setDelayTime: 3, isWrongAnswer: true)
             settings.questionsAsked += 1
         }
     }
@@ -88,28 +87,27 @@ class ViewController: UIViewController {
     func displayQuestion() {
         //Generates a random number to select a question that has not been used yet. If a question that has been
         //used is selected it will generate a new one until that is not the case
-        indexOfSelectedQuestion = generateRandomNumber(upperBound: questionSet.triviaQuestions.count)
+        indexOfSelectedQuestion = generateRandomNumber(upperBound: questionSet.count)
         while usedQuestions.contains(indexOfSelectedQuestion){
-           indexOfSelectedQuestion = generateRandomNumber(upperBound: questionSet.triviaQuestions.count)
+           indexOfSelectedQuestion = generateRandomNumber(upperBound: questionSet.count)
         }
         
         usedQuestions.append(indexOfSelectedQuestion)
-        let questionDictionary = questionSet.triviaQuestions[indexOfSelectedQuestion]
-        questionField.text = questionDictionary["Question"]
+        let questionDictionary = questionSet[indexOfSelectedQuestion]
+        questionField.text = questionDictionary.question
         playAgainButton.hidden = true
     }
     
     func displayAnswerOptions(){
-        let selectedQuestionDict = questionSet.triviaQuestions[indexOfSelectedQuestion]
-        var options: [String] = ["Answer","Option2","Option3","Option4"]
+        let selectedQuestionDict = questionSet[indexOfSelectedQuestion]
+        let options: [String] = ["answer","choice2","choice3","choice4"]
         var randomNumber = generateRandomNumber(upperBound: options.count)
-        
         usedOptions.append(randomNumber)
         
         //Cycles through the number of choices in the choices array and randomly orders the choice options
         //on the choice buttons so that they are dynamically placed and not in the same spot every time
         for i in 0..<choices.count{
-            choices[i].setTitle(selectedQuestionDict[options[randomNumber]], forState: UIControlState.Normal)
+            choices[i].setTitle(selectedQuestionDict.getRandomQuestion(randomNumber), forState: UIControlState.Normal)
             randomNumber = generateRandomNumber(upperBound: options.count)
             
             //If an randomly selected option is already displayed on a choice button select a different one until
@@ -143,11 +141,11 @@ class ViewController: UIViewController {
         //the incorrect selection game screen
         if (sender.titleLabel!.text == getCorrectAnswer()) {
             stopTimer()
-            setGameScreen(sound: audioPlayer, hideCorrectAnswerField: true, setCorrectAnswerText: " ", setQuetionFieldText: "Correct!", setDelayTime: 2)
+            setGameScreen(sound: audioPlayer, setQuetionFieldText: "Correct!", setDelayTime: 2, isWrongAnswer: false)
             settings.correctQuestions += 1
         } else {
             stopTimer()
-            setGameScreen(sound: audioPlayer2, hideCorrectAnswerField: false, setCorrectAnswerText: "Sorry! The correct answer was actually: ", setQuetionFieldText: " ", setDelayTime: 3)
+            setGameScreen(sound: audioPlayer2, setQuetionFieldText: "Sorry! The correct answer was actually: ", setDelayTime: 3, isWrongAnswer: true)
         }
     }
     
@@ -155,32 +153,33 @@ class ViewController: UIViewController {
         if settings.questionsAsked == settings.questionsPerRound {
             // Game is over
             displayScore()
-            displayCorrectAnswerField.hidden = true
             timer.hidden = false
             timer.text = " "
         } else {
             // Continue game
             startTimer()
-            displayCorrectAnswerField.hidden = true
             displayQuestion()
             displayAnswerOptions()
         }
     }
     
-    func setGameScreen(sound sound:AVAudioPlayer, hideCorrectAnswerField: Bool, setCorrectAnswerText: String, setQuetionFieldText:String, setDelayTime:Int){
+    func setGameScreen(sound sound:AVAudioPlayer, setQuetionFieldText:String, setDelayTime:Int, isWrongAnswer: Bool){
         //Sets the game sound and text labels based on whether or not the correct or wrong answer was selected
         sound.play()
-        displayCorrectAnswerField.hidden = hideCorrectAnswerField
-        displayCorrectAnswerField.text = "\(setCorrectAnswerText) \(getCorrectAnswer())"
-        questionField.text = setQuetionFieldText
+        if(isWrongAnswer == false){
+        questionField.text = "\(setQuetionFieldText)"
+        }else
+        {
+        questionField.text = "\(setQuetionFieldText) \(getCorrectAnswer())"
+        }
         loadNextRoundWithDelay(seconds: setDelayTime)
     }
     
     func getCorrectAnswer()->String{
         //Gets the correct answer for selected question and returns it
-        let selectedQuestionDict = questionSet.triviaQuestions[indexOfSelectedQuestion]
-        let correctAnswer = selectedQuestionDict["Answer"]
-        return correctAnswer!
+        let selectedQuestionDict = questionSet[indexOfSelectedQuestion]
+        let correctAnswer = selectedQuestionDict.answer
+        return correctAnswer
     }
     
     @IBAction func playAgain() {
