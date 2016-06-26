@@ -18,7 +18,7 @@ struct QuestionsModel {
     let choice3: String
     let choice4: String
     
-    func getRandomQuestion(randomNumber: Int) -> String {
+    func getRandomChoice(randomNumber: Int) -> String {
         let options = [self.answer,self.choice2,self.choice3,self.choice4]
         return (options[randomNumber])
     }

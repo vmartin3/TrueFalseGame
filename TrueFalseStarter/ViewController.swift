@@ -107,7 +107,7 @@ class ViewController: UIViewController {
         //Cycles through the number of choices in the choices array and randomly orders the choice options
         //on the choice buttons so that they are dynamically placed and not in the same spot every time
         for i in 0..<choices.count{
-            choices[i].setTitle(selectedQuestionDict.getRandomQuestion(randomNumber), forState: UIControlState.Normal)
+            choices[i].setTitle(selectedQuestionDict.getRandomChoice(randomNumber), forState: UIControlState.Normal)
             randomNumber = generateRandomNumber(upperBound: options.count)
             
             //If an randomly selected option is already displayed on a choice button select a different one until
